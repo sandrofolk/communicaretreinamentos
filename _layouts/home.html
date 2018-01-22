@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<!--<div class="home">-->
+
+  <!--<h1 class="page-heading">Posts</h1>-->
+  <!---->
+  <!--{{ content }}-->
+
+  <!--<ul class="post-list">-->
+    <!--{% for post in site.posts %}-->
+      <!--<li>-->
+        <!--{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}-->
+        <!--<span class="post-meta">{{ post.date | date: date_format }}</span>-->
+
+        <!--<h2>-->
+          <!--<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>-->
+        <!--</h2>-->
+      <!--</li>-->
+    <!--{% endfor %}-->
+  <!--</ul>-->
+
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
+
+<!--</div>-->
+
+<div class="page-header section-dark" style="background-image: url('{{ "/assets/img/antoine-barres.jpg" | relative_url }}')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <!--<h1 class="presentation-title">{{ site.title | escape }}</h1>-->
+                <h1 class="presentation-title"><img src="{{ "/assets/img/communicare_perfil_facebook.png" | relative_url }}" class="img-thumbnail img-responsive"></h1>
+                <div class="fog-low">
+                    <img src="{{ "/assets/img/fog-low.png" | relative_url }}" alt="">
+                </div>
+                <div class="fog-low right">
+                    <img src="{{ "/assets/img/fog-low.png" | relative_url }}" alt="">
+                </div>
+            </div>
+
+            <h2 class="presentation-subtitle text-center">{{ site.slogan | escape }}</h2>
+        </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('{{ "/assets/img/clouds.png" | relative_url }}'); "></div>
+    <!--<h6 class="category category-absolute">Designed and coded by-->
+        <!--<a href="https://www.creative-tim.com" target="_blank">-->
+            <!--<img src="{{ "/assets/img/creative-tim-white-slim2.png" | relative_url }}" class="creative-tim-logo">-->
+        <!--</a>-->
+    <!--</h6>-->
+</div>
+
+<div class="section section-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+                <div class="card card-plain">
+                    <h3 class="title">Entre para nossa lista de espera:</h3>
+                    <form class="contact-form" action="https://communicaretreinamentos.us17.list-manage.com/subscribe/post?u=5d7465dd599d2a961560996f8&amp;id=89e3476efc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <label class="text-danger">Melhor Email</label>
+                        <div class="input-group form-group-no-border">
+                            <span class="input-group-addon">
+                                <i class="nc-icon nc-email-85"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Email" name="EMAIL" required>
+                        </div>
+
+                        <label class="text-danger">Primeiro Nome</label>
+                        <div class="input-group form-group-no-border">
+                            <span class="input-group-addon">
+                                <i class="nc-icon nc-badge"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Nome" name="FNAME">
+                        </div>
+
+                        <label class="text-danger">Sobrenome</label>
+                        <div class="input-group form-group-no-border">
+                            <span class="input-group-addon">
+                                <i class="nc-icon nc-badge"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Nome" name="LNAME">
+                        </div>
+
+                        <input type="submit" class="btn btn-danger btn-block btn-round" value="Cadastrar">
+                    </form>
+                    <!--<div class="forgot">-->
+                        <!--<a href="#" class="btn btn-link btn-danger">Forgot password?</a>-->
+                    <!--</div>-->
+                </div>
+                <!--<div class="col text-center">-->
+                    <!--<a href="examples/register.html" class="btn btn-outline-neutral btn-round btn-lg" target="_blank">View Register Page</a>-->
+                <!--</div>-->
+            </div>
+
+            <div class="col-md-5 pull-right text-truncate">
+                <div class="card card-just-text bg-danger">
+                    <div class="card-header">
+                        <h3 class="title">Contatos:</h3>
+                    </div>
+                    <div class="card-body">
+                        <span class="text-dark"><i class="fa fa-whatsapp"></i>: {{ site.phone }}</span><br>
+                        <span class="text-nowrap"><i class="fa fa-envelope"></i>: <a class="text-dark" href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

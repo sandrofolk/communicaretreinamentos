@@ -1,0 +1,51 @@
+{% assign default_paths = site.pages | map: "path" %}
+{% assign page_paths = site.header_pages | default: default_paths %}
+
+<nav class="navbar navbar-expand-md fixed-top bg-transparent" color-on-scroll="50">
+    <div class="container">
+        <div class="navbar-translate">
+            <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title_html }}</a>-->
+            <a class="navbar-brand" href="{{ "/" | relative_url }}">
+                <img src="{{ "/assets/img/communicare_logo_228x39.png" | relative_url }}" class="img-responsive">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" title="Siga-nos no Twitter!" data-placement="bottom" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                        <p class="d-lg-none">Twitter</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" title="Curta-nos no Facebook!" data-placement="bottom" href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                        <p class="d-lg-none">Facebook</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" title="Siga-nos no Instagram!" data-placement="bottom" href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                        <p class="d-lg-none">Instagram</p>
+                    </a>
+                </li>
+                {% if page_paths %}
+
+                  {% for path in page_paths %}
+                    {% assign my_page = site.pages | where: "path", path | first %}
+                    {% if my_page.title %}
+                    <li class="nav-item">
+                      <a href="{{ my_page.url | relative_url }}" class="nav-link">{{ my_page.title | escape }}</a>
+                    </li>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
