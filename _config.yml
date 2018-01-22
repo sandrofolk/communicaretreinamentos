@@ -20,8 +20,8 @@ email: contato@communicaretreinamentos.com.br
 phone: +55 (43) 9 9603-3611
 description: >- # this means to ignore newlines until "baseurl:"
   Centro de Treinamentos Communicare.
-baseurl: "/communicaretreinamentos" # the subpath of your site, e.g. /blog
-url: "https://sandrofolk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://communicaretreinamentos.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 lang: pt-br
 twitter_username: CommunicareBR
 facebook_username: CommunicareTreinamentos
